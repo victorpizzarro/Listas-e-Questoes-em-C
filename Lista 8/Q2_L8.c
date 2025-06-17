@@ -16,13 +16,7 @@ para graus Fahrenheit.
 #include <stdio.h>
 #include <stdlib.h>
 
-void temperatura(float tempC) {
-	float tempF;
-	
-	tempF = (tempC * 9/5) + 32;
-	
-	printf("\n\nA temperatura em fahrenheit: %.2f", tempF);
-}
+float fahrenheit(float tempC);
 
 
 int main(){
@@ -31,7 +25,17 @@ int main(){
 	printf("\nEntre com a temperatura em Graus Celcius: ");
 	scanf("%f",&tempC);
 			
-	temperatura(tempC);
+	
+	printf("A temperatura %.1f Celcius em Fahrenheit e: %.1f", tempC, fahrenheit(tempC));
+	
 	
 	return 0;
+}
+
+
+// Conversor de graus
+float fahrenheit(float tempC) {
+	
+			
+	return (tempC * 1.8) + 32;
 }
