@@ -22,20 +22,19 @@ void mostrarVetor (int vetor[], int tamanho);
 // Principal --
 void main ()
 {
-	//declaração de variáveis
+	
 	int vetor[6];
 	int tam = 6;
 	
-	//preenchendo o vetor de forma aleatória
+
 	preencherAleatorio (vetor, tam, 10);
 	
-	//exibindo vetor antes da troca
+
 	mostrarVetor (vetor, tam);
 	
-	//chamando a função
+
 	trocarElementos (vetor, tam);
 
-	//exibindo vetor depois da troca
 	mostrarVetor (vetor, tam);
 }
 

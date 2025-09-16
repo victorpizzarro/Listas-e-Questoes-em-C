@@ -14,15 +14,23 @@ número B.
 #include <stdlib.h>
 
 void mostrarVetor(float vet[], int len);
-void trocarOcorrencias(float vet[], int len);
+void trocarOcorrencias(float vet[], int len, float a, float b);
 
 int main() {
 	
 	float vet[7] = {1.6, 2.4, 3.3, 4.2, 5.1, 2.4, 2.4};
+	float a, b;
+	
 	printf("\nVetor Principal\n");
 	mostrarVetor(vet, 7);
+				
+	printf("\n\nInforme o numero que deseja trocar: ");
+	scanf("%f",&a);
 	
-	trocarOcorrencias(vet, 7);
+	printf("\nInforme o numero que deseja adicionar: ");
+	scanf("%f",&b);
+	
+	trocarOcorrencias(vet, 7, a, b);
 	printf("\n\nVetor Alterado\n");
 	mostrarVetor(vet, 7);
 	
@@ -30,16 +38,10 @@ int main() {
 }
 
 
-void trocarOcorrencias(float vet[], int len){
+void trocarOcorrencias(float vet[], int len, float a, float b){
 	
 	int i;
-	float a, b;
-			
-	printf("\n\nInforme o numero que deseja trocar: ");
-	scanf("%f",&a);
-	
-	printf("\nInforme o numero que deseja adicionar: ");
-	scanf("%f",&b);
+
 	
 	for (i = 0; i<len; i++){
 		
